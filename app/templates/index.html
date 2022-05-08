@@ -1,1 +1,19 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro %}
 
+{% block content %}
+    
+        <div  class="container" id="particles-js">
+                <h2 class="text-center" id="posts">Pitch Hub</h2>
+            <ul class="nav nav-pills nav-justified nav-fill" role="tablist">
+                <li class="nav-item" >
+                    <a id ="all" class="nav-link" data-toggle="tab" href="#all"><strong>Pitch Hub</strong> </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div  class="container tab-pane active" id="all"><br>
+                    {{ macro.display(pitches) }}
+                </div>
+            </div>
+        </div>
+{% endblock%}
