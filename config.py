@@ -1,5 +1,6 @@
 import os
-class config:
+
+class Config:
     debug = True
     
     SECRET_KEY = os.environ.get('SECRET_KEY')
@@ -7,17 +8,17 @@ class config:
 
      #  email configurations
     MAIL_SERVER = 'smtp.gmail.com'
-    MAIL_PORT = 
+    MAIL_PORT = '587'
     MAIL_USE_TLS = False
     MAIL_USE_SSL = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
-    class ProdConfig(Config):
+class ProdConfig(Config):
     '''
     Production  configuration child class
     Args:
-        Config: The parent configuration class with General configuration settings
+    Config: The parent configuration class with General configuration settings
     '''
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
    
@@ -25,7 +26,7 @@ class TestConfig(Config):
     '''
     Testing configuration child class
     Args:
-        Config: The parent configuration class with General configuration settings
+    Config: The parent configuration class with General configuration settings
     '''
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://:1234@localhost/'
 
