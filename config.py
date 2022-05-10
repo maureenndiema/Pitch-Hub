@@ -4,7 +4,8 @@ class Config:
     debug = True
     
     SECRET_KEY = os.environ.get('SECRET_KEY')
-    SQLALCHEMY_DATABASE_URL= 'postgresql+psycopg2::1234@localhost'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://username:password@localhost/database'
+    UPLOADED_PHOTOS_DEST='app/static/photos'
 
      #  email configurations
     MAIL_SERVER = 'smtp.gmail.com'
