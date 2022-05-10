@@ -5,6 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_uploads import IMAGES, UploadSet,configure_uploads
 from flask_mail import Mail
+from werkzeug import secure_filename,FileStorage
 
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'

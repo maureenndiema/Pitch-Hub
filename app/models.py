@@ -39,7 +39,7 @@ class User(UserMixin, db.Model):
         return f'User {self.username}'
 
 class Pitch(db.Model):
-    __tablename__ = 'Pitch hub'
+    __tablename__ = 'Pitchhub'
     id = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String(255), nullable = False)
     post = db.Column(db.Text(), nullable = False)
