@@ -1,0 +1,31 @@
+{% extends 'base.html' %} 
+{% macro display(posts) %}
+<div class="container-fluid">
+</div>
+<br>
+<div class="jumbotron">
+    <div class="overlay">
+        <h1 class="">Pitch Hub</h1>
+        <a href="/new_posts"><button class="btn">New Pitch</button></a>
+    </div>
+</div>
+<div class="card">
+    {% if posts %} 
+    {% for my_post in posts %} 
+
+    <p>{{my_post.post}}</p>
+                <p><br> Category: {{my_post.category}}</p>
+            </div>
+            <div class="card-footer foot_flex d-block mx-auto">
+                <a href="/comment/{{my_post.id}}"><button class="btn btn-info">Comment</button></a>
+                <a href="/like/{{my_post.id}}"><button class="btn btn-success">Like {{my_post.up_vote.count()}}</button></a>
+                <h1>{{upvotes}}</h1>
+                <a href="/dislike/{{my_post.id}}"><button class="btn btn-danger">Dislike {{my_post.down_vote.count()}}</button></a>
+                <h4></h4>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endmacro %}
