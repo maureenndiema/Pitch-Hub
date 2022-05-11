@@ -1,0 +1,4 @@
+Hello {{user.username}}
+Welcome to Pitch Hub
+We acknowledge you have signed up to our application.
+Pitch us in!

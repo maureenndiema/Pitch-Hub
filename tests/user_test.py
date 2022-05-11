@@ -9,7 +9,7 @@ class UserTest(unittest.TestCase):
                 self.new_user.password
 
 def test_password_verification(self):
-            self.assertTrue(self.new_user.verify_password('mandi'))
+            self.assertTrue(self.new_user.verify_password('maureen'))
 
 
 if __name__ == '__main__':

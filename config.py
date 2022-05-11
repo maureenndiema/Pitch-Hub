@@ -4,7 +4,7 @@ class Config:
     debug = True
     
     SECRET_KEY = os.environ.get('SECRET_KEY')
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://username:password@localhost/database'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://maureen:1234@localhost/pitchhub'
     UPLOADED_PHOTOS_DEST='app/static/photos'
 
      #  email configurations
@@ -29,7 +29,7 @@ class TestConfig(Config):
     Args:
     Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://:1234@localhost/'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://maureen:1234@localhost/pitchhub'
 
 class DevConfig(Config):
     '''
@@ -37,7 +37,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://:@localhost/'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://maureen:1234@localhost/pitchhub'
     
     
     DEBUG = True

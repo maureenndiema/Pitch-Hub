@@ -9,7 +9,7 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(255), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
     secure_password = db.Column(db.String(255), nullable=False)
-    pitches = db.relationship('Pitch', backref='user', lazy='dynamic')
+    pitch = db.relationship('Pitch', backref='user', lazy='dynamic')
     comment = db.relationship('Comment', backref='user', lazy='dynamic')
     upvote = db.relationship('Upvote', backref='user', lazy='dynamic')
     downvote = db.relationship('Downvote', backref='user', lazy='dynamic')
@@ -39,7 +39,7 @@ class User(UserMixin, db.Model):
         return f'User {self.username}'
 
 class Pitch(db.Model):
-    __tablename__ = 'Pitchhub'
+    __tablename__ = 'pitch'
     id = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String(255), nullable = False)
     post = db.Column(db.Text(), nullable = False)
@@ -66,7 +66,7 @@ class Comment(db.Model):
     __tablename__ = 'comments'
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-    pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.id'), nullable=False)
+    pitch_id = db.Column(db.Integer, db.ForeignKey('pitch.id'), nullable=False)
     comment = db.Column(db.Text(),nullable = False)
 
     def save_c(self):
@@ -91,7 +91,7 @@ class Upvote(db.Model):
 
     id = db.Column(db.Integer,primary_key=True)
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
-    pitch_id = db.Column(db.Integer,db.ForeignKey('pitches.id'))
+    pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))
     
 
     def save(self):
@@ -112,7 +112,7 @@ class Downvote(db.Model):
 
     id = db.Column(db.Integer,primary_key=True)
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
-    pitch_id = db.Column(db.Integer,db.ForeignKey('pitches.id'))
+    pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))
     
 
     def save(self):
