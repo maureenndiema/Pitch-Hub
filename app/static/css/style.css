@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 body {
-    background-image: url("");
+    background-image: url("../image/juja-han-m27LRYGADMU-unsplash.jpg");
     scroll-behavior: smooth;
     text-align: center;
-    color: rgb(201, 185, 185);
+    color: rgb(128, 19, 19);
     font-size: large;
     font-weight: 400;
     align-items: center;
