@@ -1,3 +1,3 @@
-function plus(i){
-    return i++;
-    }
+// function plus(i){
+//     return i++;
+//     }
