@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 body {
-    
+    background-image: url('../image/ghena-kruk-w9KdXY_Qj8c-unsplash.jpg');
     scroll-behavior: smooth;
     text-align: center;
-    color: #f3e5e5;
+    color: #050505;
     font-size: large;
     font-weight: 400;
     align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .text{
@@ -165,7 +167,7 @@ display:flex;
 }
 .pitches{
   background-color: rgb(13, 128, 128);
-  color: rgb(5, 27, 151);
+  color: rgb(214, 218, 241);
   padding: 2%;
   border-radius: 8px;
   margin-bottom: 1%;
@@ -174,3 +176,10 @@ display:flex;
   margin-top: 5%;
   color: rgb(14, 13, 13);
 }
+
+.inside-nav{
+  margin-left: 20px;
+} 
+/* .nav-link{
+  text-decoration: none;
+} */
