@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 body {
-    background-image: url('../image/ghena-kruk-w9KdXY_Qj8c-unsplash.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('../image/ram-pavan-kumar-melam-eKD4zXfuLxk-unsplash.jpg');
     scroll-behavior: smooth;
     text-align: center;
     color: #050505;
@@ -9,6 +9,7 @@ body {
     align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
 .text{
@@ -49,7 +50,7 @@ margin-top:20px;
 }
 
 .navbar-inner {
-  background:transparent;
+  background:white;
 }
 
 .division {
@@ -104,13 +105,13 @@ display:flex;
 }
 
 #all{
-  color: rgb(32, 20, 202);
+  color: rgb(241, 189, 16);
   font-size: 18px;
 }
 #carded{
   border-radius:25px 25px 0px 0px; 
-  background-color: rgb(233, 233, 223);
-  opacity: .4;
+  background-color: rgb(12, 11, 11);
+  opacity: .7;
   margin-bottom: 50px;
   margin-top: 30px;
 }
@@ -166,7 +167,7 @@ display:flex;
   color: rgb(180, 5, 5);
 }
 .pitches{
-  background-color: rgb(13, 128, 128);
+  background-color: rgb(235, 241, 241);
   color: rgb(214, 218, 241);
   padding: 2%;
   border-radius: 8px;
@@ -179,7 +180,11 @@ display:flex;
 
 .inside-nav{
   margin-left: 20px;
+  list-style: none;
 } 
 /* .nav-link{
   text-decoration: none;
 } */
+.nav-item{
+  list-style: none;
+}
